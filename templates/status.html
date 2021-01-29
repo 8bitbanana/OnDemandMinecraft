@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Minecraft Server Status</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/status.css') }}">
+        <script src="{{ url_for('static', filename='js/mcstatus.js') }}"></script>
+    </head>
+    <body>
+        <div id="mainDiv" class="noselect">
+            <img id="mclogo" src="{{ url_for('static', filename='img/minecraft.png') }}">
+            <h1 id="title">Minecraft Server Status</h1>
+            <div id="statusDiv">
+                <div class="statusTableCell">
+                    Main Server Status
+                </div>
+                <div class="statusTableCell">
+                    <a id="mainStatus">Loading...</a>
+                </div>
+                <div class="statusTableCell">
+                    Minecraft Server Status
+                </div>
+                <div class="statusTableCell">
+                    <a id="mcStatus">Loading...</a>
+                </div>
+                <div class="statusTableCell">
+                    Server IP
+                </div>
+                <div class="statusTableCell">
+                    <div class="tooltip" onclick="copyip()">
+                        <a id="serverIp">Loading...</a>
+                        <span class="tooltiptext">Click to copy</span>
+                    </div>
+                </div>
+                <button onclick="startMainServer()" id="mainStart" disabled="">Start Main</button>
+                <button onclick="startMcServer()" id="mcStart" disabled="">Start MC</button>
+            </div>
+            <div id="playersDiv" style="display: none;">
+                <p id="currentPlayers">Loading</p>
+            </div>
+        </div>
+    </body>
+</html>

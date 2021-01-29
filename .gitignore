@@ -1,0 +1,9 @@
+*.pem
+/serverip
+**/__pycache__/*
+**/.vscode/*
+*.swp
+**/configuration.py
+**/venv/*
+*.save
+**/*.log*

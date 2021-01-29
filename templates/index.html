@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+      <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <title>On Demand MC</title>
+  </head>
+  <body>
+    <div id="mainDiv">
+      <h1>Minecraft</h1>
+      <form action="/login" method="POST">
+        <p id="passLabel">Enter Password</p>
+        <input type="password" id="pass" name="password" required autofocus>
+        <input type="submit" value="Sign in">
+      </form>
+    </div>
+  </body>
+</html>
